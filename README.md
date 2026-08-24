@@ -2,6 +2,11 @@
 
 An interactive Power BI dashboard that analyzes 20,000+ UPI (Unified Payments Interface) transactions across Indian cities for the year 2024. The report tracks transaction volume, amounts, and running account balance over time, with rich slicing across banks, cities, devices, demographics, and payment attributes.
 
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Data Analytics](https://img.shields.io/badge/Data-Analytics-1f4e79?style=for-the-badge)
+![Status](https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
+
+
 ## 📊 Overview
 
 This project explores UPI transaction data to surface trends in monthly transaction activity and balance movement, and to enable deep-dive filtering by bank, city, merchant, payment mode, and customer demographics. Users can toggle between column and line chart views for both **Amount** and **Balance**, and drill into a city/currency matrix for granular monthly figures.
