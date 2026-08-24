@@ -1,219 +1,70 @@
-# UPI Transactions Analysis Dashboard – Power BI
+# UPI Transactions Dashboard — Power BI
 
-## 📊 Project Overview
+An interactive Power BI dashboard that analyzes 20,000+ UPI (Unified Payments Interface) transactions across Indian cities for the year 2024. The report tracks transaction volume, amounts, and running account balance over time, with rich slicing across banks, cities, devices, demographics, and payment attributes.
 
-This project is an interactive **UPI Transactions Analysis Dashboard** developed using **Microsoft Power BI**. The dashboard analyzes transaction volume, transaction value, success/failure rates, customer demographics, payment methods, banks, merchants, cities, transaction types, and other UPI transaction attributes.
+## 📊 Overview
 
-The project is designed to demonstrate practical skills in **Data Analytics, Data Cleaning, Data Modeling, DAX, and Power BI Dashboard Development**.
+This project explores UPI transaction data to surface trends in monthly transaction activity and balance movement, and to enable deep-dive filtering by bank, city, merchant, payment mode, and customer demographics. Users can toggle between column and line chart views for both **Amount** and **Balance**, and drill into a city/currency matrix for granular monthly figures.
 
-## 🎯 Objectives
+## 🗂️ Files in this Repository
 
-- Analyze overall UPI transaction performance.
-- Track transaction count and transaction amount.
-- Monitor successful and failed transactions.
-- Identify transaction trends over time.
-- Analyze transactions by city, bank, merchant, and transaction type.
-- Understand customer demographics such as age and gender.
-- Compare payment methods, devices, and payment modes.
-- Identify important patterns and insights from UPI transaction data.
-- Present the analysis through an interactive Power BI dashboard.
-
-## 🗂️ Dataset
-
-The project uses an Excel dataset containing **20,000 UPI transaction records**.
-
-### Dataset Columns
-
-| Column | Description |
+| File | Description |
 |---|---|
-| TransactionID | Unique transaction identifier |
-| TransactionDate | Date of the transaction |
-| Amount | Transaction amount |
-| BankNameSent | Bank from which money was sent |
-| BankNameReceived | Receiving bank |
-| RemainingBalance | Customer balance after transaction |
-| City | Customer transaction city |
-| Gender | Customer gender |
-| TransactionType | Type of transaction |
-| Status | Transaction status |
-| TransactionTime | Time of transaction |
-| DeviceType | Device used for the transaction |
-| PaymentMethod | Method used to make payment |
-| MerchantName | Merchant involved in the transaction |
-| Purpose | Purpose/category of the transaction |
-| CustomerAge | Customer age |
-| PaymentMode | Instant or scheduled payment |
-| Currency | Transaction currency |
-| CustomerAccountNumber | Customer account identifier |
-| MerchantAccountNumber | Merchant account identifier |
+| `UPI_DATA.pbix` | The Power BI report file (open with Power BI Desktop) |
+| `UPI_Transactions.xlsx` | Source dataset (20,000+ transaction records) |
+| `screenshots/` | Dashboard preview images |
 
-> **Privacy Note:** The original dataset contains account-number fields. Avoid publishing real or sensitive financial information in a public repository. If the data is synthetic, clearly label it as synthetic; otherwise, remove/mask sensitive columns before publishing.
+## 📁 Dataset
 
-## 🛠️ Tools & Technologies
+The dataset (`UPI_Transactions.xlsx`) contains ~20,000 transaction records with the following fields:
 
-- **Microsoft Power BI Desktop**
-- **Power Query** – Data cleaning and transformation
-- **DAX** – Measures and calculated analysis
-- **Microsoft Excel** – Source dataset
-- **Git & GitHub** – Version control and project portfolio
+- **Transaction details:** `TransactionID`, `TransactionDate`, `TransactionTime`, `Amount`, `RemainingBalance`, `Status`, `TransactionType`
+- **Parties:** `BankNameSent`, `BankNameReceived`, `MerchantName`, `CustomerAccountNumber`, `MerchantAccountNumber`
+- **Demographics:** `Gender`, `CustomerAge`, `City`
+- **Payment attributes:** `DeviceType`, `PaymentMethod`, `PaymentMode`, `Purpose`, `Currency`
 
-## 📈 Key KPIs
+## 🖥️ Dashboard Features
 
-The dashboard can be used to monitor KPIs such as:
+- **Global slicers:** BankNameSent, BankNameReceived, City, DeviceType, Gender, Age Group, MerchantName, PaymentMode, Purpose, TransactionType
+- **Toggle views:** switch each chart between Column and Line, for both Transaction Amount and Balance
+- **Monthly trend analysis:** transaction amount and balance patterns across all 12 months of 2024
+- **City/Currency matrix:** monthly Amount and Remaining Balance broken out by City and Currency (Bangalore/EUR, Delhi/USD, Hyderabad/GBP, Mumbai/INR, etc.)
 
-- **Total Transactions**
-- **Total Transaction Amount**
-- **Average Transaction Amount**
-- **Successful Transactions**
-- **Failed Transactions**
-- **Success Rate**
-- **Failure Rate**
-- **Average Remaining Balance**
-- **Unique Merchants**
-- **Unique Cities**
-- **Transaction Count by Type**
+## 📸 Dashboard Previews
 
-## 📊 Dashboard Analysis
+### Transactions by Month — Column Chart
+<img width="1273" height="718" alt="Image" src="https://github.com/user-attachments/assets/3946c988-aeae-4471-a218-e9fed3fc40a7" />
 
-The dashboard provides analysis across multiple dimensions:
+### Transactions by Month — Line Chart
+<img width="1271" height="708" alt="Image" src="https://github.com/user-attachments/assets/27bad0b5-0dbb-4750-825f-bfcc931cdead" />
 
-### Transaction Performance
-- Total transaction volume
-- Total transaction value
-- Average transaction amount
-- Success vs. failed transactions
+### Balance by Month — Column Chart
+<img width="1274" height="712" alt="Image" src="https://github.com/user-attachments/assets/6bb7f4b4-09ce-4466-9b91-6bb38e89d311" />
 
-### Time Analysis
-- Transaction trends by date
-- Monthly/periodic transaction patterns
-- Transaction-time analysis
+### Balance by Month — Line Chart
+<img width="1274" height="715" alt="Image" src="https://github.com/user-attachments/assets/1a9ee20c-0327-4edf-a7af-9eb938a4ca30" />
 
-### Geographic Analysis
-- Transactions by city
-- Transaction amount by city
-- City-level performance comparison
+### City / Currency Matrix View
+<img width="1268" height="714" alt="Image" src="https://github.com/user-attachments/assets/6883218e-e8c9-46b2-9c21-0db0caa7085e" />
 
-### Banking Analysis
-- Sending bank analysis
-- Receiving bank analysis
-- Bank-to-bank transaction patterns
+## 🚀 Getting Started
 
-### Customer Analysis
-- Gender distribution
-- Customer age analysis
-- Transaction behavior by demographic segments
+1. Install [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (Windows only).
+2. Clone or download this repository.
+3. Open `UPI_DATA.pbix` in Power BI Desktop.
+4. If prompted, point the data source to `UPI_Transactions.xlsx` in this repo.
+5. Use the slicers and chart-toggle buttons at the top of each page to explore the data.
 
-### Payment Analysis
-- Payment method distribution
-- Payment mode comparison
-- Device-type analysis
-- Transaction-type analysis
+## 🛠️ Tools Used
 
-### Merchant & Purpose Analysis
-- Top merchants by transaction value
-- Transaction purpose/category analysis
-- Merchant transaction volume
+- **Power BI Desktop** — data modeling, DAX measures, and report design
+- **Excel** — source data storage
 
-## 🧮 Example DAX Measures
+## 📌 Notes
 
-Example measures that can be created for this project:
+- Report year in view: **2024**
+- Currency values vary by city (INR, USD, EUR, GBP) as reflected in the matrix visual.
 
-```DAX
-Total Transactions =
-COUNTROWS('UPI Transactions')
+## 📄 License
 
-Total Transaction Amount =
-SUM('UPI Transactions'[Amount])
-
-Average Transaction Amount =
-AVERAGE('UPI Transactions'[Amount])
-
-Successful Transactions =
-CALCULATE(
-    COUNTROWS('UPI Transactions'),
-    'UPI Transactions'[Status] = "Success"
-)
-
-Failed Transactions =
-CALCULATE(
-    COUNTROWS('UPI Transactions'),
-    'UPI Transactions'[Status] = "Failed"
-)
-
-Success Rate =
-DIVIDE(
-    [Successful Transactions],
-    [Total Transactions],
-    0
-)
-```
-
-> Replace `'UPI Transactions'` with the actual table name in your Power BI model if it is different.
-
-## 🔄 Data Preparation
-
-The general workflow used in the project is:
-
-1. Import the Excel dataset into Power BI.
-2. Inspect data types and missing values.
-3. Clean and transform data using Power Query.
-4. Format date, time, numeric, and categorical fields.
-5. Create calculated measures using DAX.
-6. Build visualizations and KPI cards.
-7. Add slicers and interactive filters.
-8. Format the dashboard for clear business reporting.
-9. Validate KPIs and dashboard results.
-
-## 📁 Repository Structure
-
-```text
-UPI-Transactions-PowerBI/
-│
-├── UPI DATA.pbix
-├── UPI+Transactions.xlsx
-├── README.md
-└── requirements.txt
-```
-
-## 🚀 How to Use
-
-1. Clone or download this repository.
-2. Install **Power BI Desktop**.
-3. Open `UPI DATA.pbix`.
-4. If Power BI asks for the source file, point the data source to `UPI+Transactions.xlsx`.
-5. Refresh the data.
-6. Explore the dashboard using slicers, filters, and visual interactions.
-
-## 💡 Skills Demonstrated
-
-- Data Cleaning
-- Data Transformation
-- Exploratory Data Analysis
-- Power Query
-- DAX
-- Data Modeling
-- KPI Development
-- Dashboard Design
-- Data Visualization
-- Business Analysis
-- Interactive Reporting
-- GitHub Project Documentation
-
-## 📌 Project Type
-
-**Data Analytics | Business Intelligence | Power BI**
-
-## 👨‍💻 Author
-
-**Rahul Naik**
-
-This project was created as part of my Data Analytics / Business Intelligence portfolio to demonstrate practical Power BI skills.
-
-## ⭐ Future Improvements
-
-- Add a dedicated date/calendar table.
-- Add drill-through pages for bank and merchant analysis.
-- Add advanced time-intelligence measures.
-- Add anomaly/fraud-oriented transaction analysis.
-- Publish the dashboard to Power BI Service.
-- Add automated data refresh.
+This project is shared for portfolio and educational purposes. Feel free to fork and adapt.
