@@ -1,0 +1,59 @@
+# Power BI Project Requirements
+
+## Software Requirements
+
+- Microsoft Power BI Desktop
+- Microsoft Excel
+- Git
+- GitHub account
+
+## Recommended Environment
+
+- Windows 10 or Windows 11
+- Minimum 4 GB RAM
+- Recommended 8 GB+ RAM
+- Internet connection for downloading/installing required software
+
+## Power BI Requirements
+
+- Power BI Desktop with support for:
+  - Power Query
+  - DAX
+  - Interactive visualizations
+  - Excel data import
+  - Data modeling
+
+## Data Source
+
+- File: `UPI+Transactions.xlsx`
+- Format: `.xlsx`
+- Records: 20,000
+- Source type: Microsoft Excel
+
+## Main Power BI Skills Used
+
+- Power Query
+- Data Cleaning
+- Data Transformation
+- Data Modeling
+- DAX Measures
+- KPI Cards
+- Slicers
+- Charts and Visualizations
+- Interactive Dashboard Design
+
+## Python / SQL
+
+Python and SQL are **not required** to open or use this Power BI project. The dashboard is built using Power BI and the Excel source dataset.
+
+## Installation
+
+1. Install Microsoft Power BI Desktop.
+2. Download or clone this GitHub repository.
+3. Open `UPI DATA.pbix`.
+4. Ensure `UPI+Transactions.xlsx` is available.
+5. Refresh the dataset if required.
+
+## Note
+
+If the project is published publicly, remove or anonymize any sensitive account-number or personally identifiable information from the source dataset before uploading it to GitHub.
